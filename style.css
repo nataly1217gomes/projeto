@@ -1,0 +1,110 @@
+/* Reset básico */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Variáveis CSS */
+  :root {
+    --color-field: #88B04B;       /* Verde rural */
+    --color-city: #4B89C9;        /* Azul urbano */
+    --color-text: #333333;
+    --color-bg: #F9F9F9;
+    --font-primary: 'Arial', sans-serif;
+    --spacing: 1rem;
+  }
+  
+  /* Estilos base */
+  body {
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+  }
+  
+  /* Links e pseudo-classes */
+  a {
+    color: var(--color-city);
+    text-decoration: none;
+  }
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: var(--color-bg);
+    padding: var(--spacing);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Navegação */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing);
+  }
+  nav a {
+    padding: 0.5rem var(--spacing);
+    border-radius: 4px;
+  }
+  nav a:hover {
+    background-color: var(--color-field);
+    color: #fff;
+  }
+  
+  /* Seções gerais */
+  section {
+    padding: var(--spacing) calc(var(--spacing) * 2);
+  }
+  
+  /* Seção de introdução */
+  #intro {
+    background: linear-gradient(to right, var(--color-field), var(--color-city));
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  /* Seção campo */
+  #campo {
+    background-color: #ffffff;
+  }
+  
+  /* Seção de conexão */
+  #conexao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing);
+  }
+  
+  /* Seção cidade */
+  #cidade {
+    background-color: #ffffff;
+  }
+  
+  /* Rodapé */
+  footer {
+    background-color: var(--color-bg);
+    text-align: center;
+    padding: var(--spacing);
+    font-size: 0.9rem;
+  }
+  
+  /* Media Query para responsividade */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    nav ul {
+      flex-direction: column;
+    }
+    #conexao {
+      flex-direction: column;
+    }
+  }
+  
